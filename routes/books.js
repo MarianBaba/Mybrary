@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 const Author = require("../models/author");
 const Book = require("../models/book");
-const path = require("path");
-const fs = require("fs");
 const imageMimeTypes = ["image/jpeg", "image/png", "image/gif"]
 
 
