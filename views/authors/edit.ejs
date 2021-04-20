@@ -1,6 +1,11 @@
-<h2>Edit Author</h2>
-<form action="/authors/<%= author.id %>?_method=PUT" method="POST">
+<h2 style="
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: normal;
+    font-size: 40px;
+    text-align:center;
+">Edit Author</h2>
+<form style="text-align: center; font-size:25px" action="/authors/<%= author.id %>?_method=PUT" method="POST">
     <%- include("_form_fields") %>
-    <a href="/authors/<%= author.id %>">Cancel</a>
-    <button type="submit">Update</button>
+    <a style="font-size:20px;text-decoration:none;color:white;background-color:red;padding:7px;border-radius:5px;margin-right:30px" href="/authors/<%= author.id %>">Cancel</a>
+    <button style="font-size:20px;text-decoration:none;color:white;background-color:blue;padding:7px;border-radius:5px;margin-right:30px;border:none;font-family:'Times New Roman'" type="submit">Update</button>
 </form>
