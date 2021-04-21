@@ -6,6 +6,26 @@
 ">Edit Author</h2>
 <form style="text-align: center; font-size:25px" action="/authors/<%= author.id %>?_method=PUT" method="POST">
     <%- include("_form_fields") %>
-    <a style="font-size:20px;text-decoration:none;color:white;background-color:red;padding:7px;border-radius:5px;margin-right:30px" href="/authors/<%= author.id %>">Cancel</a>
-    <button style="font-size:20px;text-decoration:none;color:white;background-color:blue;padding:7px;border-radius:5px;margin-right:30px;border:none;font-family:'Times New Roman'" type="submit">Update</button>
+    <div style="margin-top: 25px;">
+    <a style="
+    text-decoration: none;
+    color:white;
+    background-color: rgb(245, 39, 39);
+    padding:10px;
+    border-radius: 5px;
+    font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-right: 20px;
+" href="/authors/<%= author.id %>">Cancel</a>
+    <button style="
+    text-decoration: none;
+    color:white;
+    background-color: rgb(14, 101, 233);
+    padding:10px;
+    border-radius: 5px;
+    font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    border:none;
+" type="submit">Update</button>
+</div>
 </form>

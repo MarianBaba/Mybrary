@@ -5,22 +5,23 @@
     text-align:center;
 ">Search Authors</h2>
 <form style="text-align: center; font-size:25px" action="/authors" method="GET">
-    <label style="margin-right:10px">Name</label>
-    <input style="font-size:19px; margin-left:10px; margin-right:60px;border:none;outline:none" type="text" name="name" value="<%= searchOptions.name %>">
-    <button style="font-size:20px;text-decoration:none;color:white;background-color:blue;padding:7px;border-radius:5px;margin-right:30px;border:none;font-family:'Times New Roman'" type="submit">Search</button>
+    <label style="margin-right:10px;font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Name</label>
+    <input style="font-size:19px; margin-right:40px;border:none;outline:none" type="text" name="name" value="<%= searchOptions.name %>">
+    <button style="font-size:20px;text-decoration:none;color:white;background-color:rgb(14, 101, 233);padding:7px;border-radius:5px;border:none;font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 10px;" type="submit">Search</button>
 </form>
 <br>
-<div style="text-align:center;margin-top:10px;font-size:25px;border: 3px solid rgb(50,50,50);margin-left:400px;margin-right:400px;background-color:rgb(40,40,40);padding-top:20px;padding-bottom:20px">
+<div style="text-align:center;margin-top:10px;border: 3px solid rgb(50,50,50);background-color:rgb(40,40,40);padding-top:20px;padding-bottom:20px;font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
 <% authors.forEach(author => { %>
-    <div style="font-family: 'Times New Roman', cursive;">
-    <%= author.name %>
+    <div style="font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 30px;margin-bottom: 10px;margin-top: 10px;">
+    <b><%= author.name %></b>
     </div>
     <br>
-    <div style="margin-bottom:7px;">
-    <a style="color:lightblue;text-decoration:none" href="/authors/<%= author.id %>">View</a>
+    <div style="margin-bottom:20px;">
+    <a style="font-size:25px;color:white;text-decoration:none;background-color: rgb(14, 101, 233);padding:7px;border-radius: 5px;" href="/authors/<%= author.id %>">View</a>
     </div>
-    <div style="margin-bottom:15px">
-    <a style="color:lightblue;text-decoration:none" href="/authors/<%= author.id %>/edit">Edit</a>
+    <div style="margin-bottom:5px">
+    <a style="font-size:25px;color:white;text-decoration:none;background-color: rgb(14, 101, 233);padding:7px;border-radius: 5px;" href="/authors/<%= author.id %>/edit">Edit</a>
     </div>
     
     <%- include("../partials/deleteForm", 

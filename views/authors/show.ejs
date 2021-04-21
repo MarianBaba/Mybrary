@@ -1,12 +1,25 @@
-<h2><%= author.name %></h2>
-<a href="/authors/<%= author.id %>/edit">Edit</a>
+<h2 style="
+font-family: 'Cinzel Decorative', cursive;
+font-weight: normal;
+font-size: 40px;
+text-align:center;
+"><%= author.name %></h2>
+<div style="text-align: center;">
+<a style="font-size:25px;color:white;text-decoration:none;background-color: rgb(14, 101, 233);padding:7px;border-radius: 5px;font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="/authors/<%= author.id %>/edit">Edit</a>
 <%- include("../partials/deleteForm", { url: `/authors/${author.id}` }) %>
 
 <% if (booksByAuthor != null ) { %>
-    <h2>Books By Author </h2>
+    <h2 style="
+    font-family: Roboto, Oxygen;
+    font-weight: normal;
+    font-size: 40px;
+    text-align:center;
+    ">Books By Author </h2>
     <% booksByAuthor.forEach(book => { %>
     <a href="/books/<%= book.id %>">
-    <img height="150" width="100" src="<%= book.coverImagePath %>">
+    <img style="margin: 20px" height="400" width="250" src="<%= book.coverImagePath %>">
     </a>
     <% }) %>
 <% } %>
+
+</div>
