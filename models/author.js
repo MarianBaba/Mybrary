@@ -12,7 +12,7 @@ authorSchema.pre("remove", function(next) {
     Book.find({ author: this.id }, (err, books) => {
         if (err) {
             next(err)
-        } else if (books.lenght > 0) {
+        } else if (books[0] != null) {
             next(new Error("This authors has books still"))
         } else {
             next()
