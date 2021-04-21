@@ -1,6 +1,25 @@
-<h2>New Book</h2>
-<form action="/books" method="POST">
+<h2 style="
+font-family: 'Cinzel Decorative', cursive;
+font-weight: normal;
+text-align: center;
+padding-top: 15px;
+font-size:40px;
+
+">New Book</h2>
+<form style="text-align: center;" action="/books" method="POST">
     <%- include("_form_fields") %>
-    <a href="/books">Cancel</a>
-    <button type="submit">Create</button>
+    
+    <button style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 25px;border-radius: 5px;border:none;
+    padding:5px; background-color: rgb(14, 101, 233);color:white;
+    " type="submit">Create</button> <br> <br>
+    <a style="
+        text-decoration: none;
+        color:white;
+        background-color: red;
+        padding:10px;
+        border-radius: 5px;
+        font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+    " href="/books">Cancel</a>
+    <br> <br> 
 </form>

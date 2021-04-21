@@ -1,10 +1,10 @@
-<div>
-    <label>Title</label>
-    <input type="text" name="title" value="<%= book.title %>">
+<div style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    <label  style="font-size: 20px;margin-right:20px">Title</label>
+    <input style="border:none;height: 20px;outline:none" type="text" name="title" value="<%= book.title %>">
 </div>
-<div>
-<label>Author</label>
-    <select name="author">
+<div style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+<label style="font-size: 20px;margin-right:20px">Author</label>
+    <select style="border:none;height: 30px; width:150px; outline:none;font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" name="author">
         <% authors.forEach(author => { %>
 
             <% if (author.id == book.author) { %>
@@ -15,24 +15,27 @@
         <% }) %>
     </select>
 </div>
-<div>
-    <label>Publish Date</label>
-    <input type="date" name="publishDate" 
+<div style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    <label style="font-size: 20px;margin-right:20px">Publish Date</label>
+    <input style="border:none;height: 30px; width: 150px; font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; outline:none" type="date" name="publishDate" 
     value="<%= book.publishDate == null ? "" : book.publishDate.toISOString().split("T")[0] %>">
 </div>
-<div>
-    <label>Page Count</label>
-    <input type="number" name="pageCount" 
+<div style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    <label style="font-size: 20px;margin-right:20px">Page Count</label>
+    <input style="border:none;height: 20px;outline:none" type="number" name="pageCount" 
     min="1"
     value="<%= book.pageCount %>">
 </div>
-<div>
-    <label>Cover</label>
-    <input type="file" name="cover" class="filepond">
-</div>
-<div>
-    <label>Description</label>
-    <textarea name="description">
+<div style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    <label  style="font-size: 20px;margin-right:20px">Description</label>
+    <textarea style="border:none;height: 50px; width: 250px; outline:none" name="description">
         <%= book.description %>
     </textarea>
+</div>
+<div style="text-align: center;">
+    <div style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        <label style="font-size: 20px;margin:20px">Cover</label><br><br>
+        <input type="file" name="cover" class="filepond">
+    </div>
+    
 </div>
