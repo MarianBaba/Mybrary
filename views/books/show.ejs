@@ -1,10 +1,23 @@
-<h2><%= book.title %></h2>
-<img src="<%= book.coverImagePath %>" height="270" width="200">
-<div>Author: <%= book.author.name %></div>
-<div>Publish Date: <%= book.publishDate.toDateString() %></div>
-<div>Page Count: <%= book.pageCount %></div>
-<div>Description: <%= book.description %></div>
+<h2 style="
+font-family: 'Cinzel Decorative', cursive;
+font-weight: normal;
+text-align: center;
+padding-top: 20px;
+font-size:30px;
 
-<a href="/books/<%= book.id %>/edit">Edit</a>
+"><%= book.title %></h2>
+<div style="text-align: center;font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 20px;">
+<img src="<%= book.coverImagePath %>" height="400" width="250">
+<div style="margin-top: 20px;"><b>Author:</b> <%= book.author.name %></div>
+<div style="margin-top: 20px;"><b>Publish Date:</b> <%= book.publishDate.toDateString() %></div>
+<div style="margin-top: 20px;"><b>Page Count:</b> <%= book.pageCount %></div>
+<div style="margin-top: 20px;"><b>Description:</b> <%= book.description %></div>
+
+<div style="margin-top: 30px;">
+
+<a style="background-color: blue;color:white;text-decoration: none;padding: 10px;border-radius: 5px;margin-right:30px" href="/books/<%= book.id %>/edit">Edit</a> 
+<a style="background-color: blue;color:white;text-decoration: none;padding: 10px;border-radius: 5px;" href="/authors/<%= book.author.id %>/edit">View Author</a>
 <%- include("../partials/deleteForm", { url: `/books/${book.id}` }) %>
-<a href="/authors/<%= book.author.id %>/edit">View Author</a>
+</div>
+</div>
+
