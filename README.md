@@ -1,2 +1,2 @@
 # Mybrary
-Simple online library
+A simple and open online library, where everyone can add authors and books
