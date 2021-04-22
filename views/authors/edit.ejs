@@ -3,29 +3,38 @@
     font-weight: normal;
     font-size: 40px;
     text-align:center;
-">Edit Author</h2>
-<form style="text-align: center; font-size:25px" action="/authors/<%= author.id %>?_method=PUT" method="POST">
-    <%- include("_form_fields") %>
-    <div style="margin-top: 25px;">
-    <a style="
-    text-decoration: none;
-    color:white;
-    background-color: rgb(245, 39, 39);
-    padding:10px;
-    border-radius: 5px;
-    font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    margin-right: 20px;
-" href="/authors/<%= author.id %>">Cancel</a>
-    <button style="
-    text-decoration: none;
-    color:white;
-    background-color: rgb(14, 101, 233);
-    padding:10px;
-    border-radius: 5px;
-    font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    border:none;
-" type="submit">Update</button>
-</div>
+">  
+    Edit Author
+</h2>
+<form style="
+    text-align: center;
+    font-size:25px" 
+    action="/authors/<%= author.id %>?_method=PUT" method="POST">
+        <%- include("_form_fields") %>
+        <div style="margin-top: 25px;">
+            <a style="
+                text-decoration: none;
+                color:white;
+                background-color: rgb(245, 39, 39);
+                padding:10px;
+                border-radius: 5px;
+                font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 20px;
+                margin-right: 20px;
+                " href="/authors/<%= author.id %>">
+                    Cancel
+                </a>
+            <button style="
+            text-decoration: none;
+            color:white;
+            background-color: rgb(14, 101, 233);
+            padding:10px;
+            border-radius: 5px;
+            font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            border:none;
+            " type="submit">
+                Update
+            </button>
+        </div>
 </form>

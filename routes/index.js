@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const Book = require("../models/book")
+const Book = require("../models/book");
 
+// Show Book in Homepage
 router.get("/", async (req, res) => {
     let books
     try {
