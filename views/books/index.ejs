@@ -1,29 +1,97 @@
 <h2 style="
-font-family: 'Cinzel Decorative', cursive;
-font-weight: normal;
-text-align: center;
-padding-top: 15px;
-font-size:40px;
-
-"
->Search Books</h2>
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 15px;
+    font-size:40px;
+    "
+>
+    Search Books
+</h2>
 <form action="/books" method="GET">
-    <div style="text-align: center;">
-    <div style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-        <label style="font-size: 20px;margin-right:20px">Title</label>
-        <input style="border:none;height: 20px;outline:none" type="text" name="title" value="<%= searchOptions.title %>">
+    <div style="
+        text-align: center;
+        "
+    >
+        <div style="
+            margin:20px; 
+            font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            "
+        >
+            <label style="
+                font-size: 20px;
+                margin-right:20px
+                "
+            >
+                Title
+            </label>
+            <input style="
+                border:none;
+                height: 20px;
+                outline:none
+                " 
+                type="text" name="title" value="<%= searchOptions.title %>"
+            >
+        </div>
+        <div style="
+            margin:20px; 
+            font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            "
+        >
+            <label style="
+                font-size: 20px;
+                margin-right:20px
+                "
+            >
+                Published After
+            </label>
+            <input style="
+                border:none;
+                height: 25px; 
+                width:180px; 
+                outline:none;
+                font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                " 
+                type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>"
+            >
+        </div>
+        <div style="
+            margin:20px; 
+            font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            "
+        >
+            <label style="
+                font-size: 20px;
+                margin-right:20px
+                "
+            >
+                Published Before
+            </label>
+            <input style="
+                border:none;
+                height: 25px; 
+                width: 180px; 
+                outline:none;
+                font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                " 
+                type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>"
+            >
+        </div>
+        <button style="
+            margin:20px; 
+            font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            border-radius: 5px;
+            border:none;
+            padding:5px; 
+            background-color: rgb(14, 101, 233);
+            color:white;
+            " 
+            type="submit"
+        >
+            Search
+        </button>
     </div>
-    <div  style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-        <label style="font-size: 20px;margin-right:20px">Published After</label>
-        <input style="border:none;height: 25px; width:180px; outline:none;font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
-    </div>
-    <div  style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-        <label style="font-size: 20px;margin-right:20px">Published Before</label>
-        <input style="border:none;height: 25px; width: 180px; outline:none;font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
-    </div>
-    <button style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 20px;border-radius: 5px;border:none;
-    padding:5px; background-color: rgb(14, 101, 233);color:white;
-    " type="submit">Search</button>
 </form>
 <br>
 <div>
@@ -32,5 +100,4 @@ font-size:40px;
         <img style="margin:10px" height="300" width="200" src="<%= book.coverImagePath %>">
     </a>
     <% }) %>  
-</div>
 </div>

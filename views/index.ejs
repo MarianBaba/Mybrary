@@ -5,8 +5,14 @@
     margin-left:20px;
     margin-bottom: 20px;
     text-align: center;
-    ">Recently added</header>
-<div style="text-align: center;">
+    "
+    >
+        Recently added
+    </header>
+<div style="
+    text-align: center;
+    "
+>
     <% books.forEach(book => { %>
     <a href="/books/<%= book.id %>">
         <img style="margin-left:15px;margin-top: 10px;" height="350" width="230" src="<%= book.coverImagePath %>">
