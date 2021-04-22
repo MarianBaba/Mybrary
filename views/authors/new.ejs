@@ -1,33 +1,48 @@
 <h2 style="
-font-family: 'Cinzel Decorative', cursive;
-font-weight: normal;
-font-size: 40px;
-text-align:center;
-">New Author</h2>
-<div style="text-align: center;">
-<form action="/authors" method="POST">
-    <%- include("_form_fields") %>
-    <div style="margin-top: 20px;">
-    <a style="
-    text-decoration: none;
-    color:white;
-    background-color: rgb(245, 39, 39);
-    padding:10px;
-    border-radius: 5px;
-    font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    margin-right: 20px;
-" href="/authors">Cancel</a>
-    <button style="
-    text-decoration: none;
-    color:white;
-    background-color: rgb(14, 101, 233);
-    padding:10px;
-    border-radius: 5px;
-    font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    border:none;
-" type="submit">Create</button>
-</form>
-</div>
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: normal;
+    font-size: 40px;
+    text-align:center;
+    "
+>
+    New Author
+</h2>
+<div style="
+    text-align: center;"
+>
+    <form action="/authors" method="POST">
+        <%- include("_form_fields") %>
+        <div style="
+            margin-top: 20px;"
+        >
+            <a style="
+                text-decoration: none;
+                color:white;
+                background-color: rgb(245, 39, 39);
+                padding:10px;
+                border-radius: 5px;
+                font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 20px;
+                margin-right: 20px;
+                " 
+                href="/authors"
+            >
+                Cancel
+            </a>
+            <button style="
+            text-decoration: none;
+            color:white;
+            background-color: rgb(14, 101, 233);
+            padding:10px;
+            border-radius: 5px;
+            font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            border:none;
+            " 
+            type="submit"
+            >
+                Create
+            </button>
+        </div>
+    </form>
 </div>

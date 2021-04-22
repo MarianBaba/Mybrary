@@ -1,18 +1,51 @@
-<div style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-    <label  style="font-size: 20px;margin-right:20px">Title</label>
-    <input style="border:none;height: 20px;outline:none" type="text" name="title" value="<%= book.title %>">
+<div style="
+        margin:20px; 
+        font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        "
+        >
+    <label style="
+        font-size: 20px;
+        margin-right:20px
+        "
+        >
+            Title
+    </label>
+    <input style="
+        border:none;
+        height: 20px;
+        outline:none
+        "
+        type="text" name="title" value="<%= book.title %>"
+    >
 </div>
-<div style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-<label style="font-size: 20px;margin-right:20px">Author</label>
-    <select style="border:none;height: 30px; width:150px; outline:none;font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" name="author">
-        <% authors.forEach(author => { %>
-
-            <% if (author.id == book.author) { %>
-            <option selected value="<%= author.id %>"><%= author.name %></option>
-            <% } else { %>
-            <option value="<%= author.id %>"><%= author.name %></option>
-            <% } %>
-        <% }) %>
+<div style="
+    margin:20px; 
+    font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    "
+>
+    <label style="
+        font-size: 20px;
+        margin-right:20px
+        "
+        >
+            Author
+    </label>
+    <select style="
+        border:none;
+        height: 30px; 
+        width:150px; 
+        outline:none;
+        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        "
+        name="author"
+        >
+            <% authors.forEach(author => { %>
+                <% if (author.id == book.author) { %>
+                    <option selected value="<%= author.id %>"><%= author.name %></option>
+                <% } else { %>
+                    <option value="<%= author.id %>"><%= author.name %></option>
+                <% } %>
+            <% }) %>
     </select>
 </div>
 <div style="margin:20px; font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">

@@ -9,9 +9,12 @@
 <form style="
     text-align: center;
     font-size:25px" 
-    action="/authors/<%= author.id %>?_method=PUT" method="POST">
+    action="/authors/<%= author.id %>?_method=PUT" method="POST"
+    >
         <%- include("_form_fields") %>
-        <div style="margin-top: 25px;">
+        <div style="
+            margin-top: 25px;"
+            >
             <a style="
                 text-decoration: none;
                 color:white;
@@ -21,9 +24,10 @@
                 font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-size: 20px;
                 margin-right: 20px;
-                " href="/authors/<%= author.id %>">
+                " href="/authors/<%= author.id %>"
+                >
                     Cancel
-                </a>
+            </a>
             <button style="
             text-decoration: none;
             color:white;
@@ -33,7 +37,8 @@
             font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 20px;
             border:none;
-            " type="submit">
+            " type="submit"
+            >
                 Update
             </button>
         </div>
