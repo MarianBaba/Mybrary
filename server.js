@@ -14,11 +14,11 @@ app.set("views", __dirname + "/views");
 app.set("layout", "layouts/layout");
 app.use(expressLayouts);
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
+app.use(express.urlencoded({ limit: "10mb", extended: false }));
 app.use(methodOverride("_method"));
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://user:L9DeVWNFkPqrEhfh@cluster0.r4ffr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { 
+mongoose.connect("mongodb+srv://marian-baba:marian1604rima@cluster0.r4ffr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { 
 useNewUrlParser: true
 })
 const db = mongoose.connection;
